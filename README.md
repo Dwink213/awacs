@@ -124,6 +124,33 @@ This page is not manually updated. The pipeline writes it.
 
 ---
 
+## What This Opens Up
+
+These are production outcomes from running AWACS on live infrastructure:
+
+**Alert fatigue → actionable intelligence**
+100+ daily backup alerts processed, transient failures separated from persistent ones, confirmed incidents routed to ServiceNow automatically. Zero manual triage. One engineer's intuition, built over years, replaced by a system that doesn't take sick days.
+[API Voyager case study →](https://awacs.ai/case-studies/api-voyager.html)
+
+**AI that can't repeat its own mistakes**
+An AI agent modified `sshd_config` on an Arc-connected node — restricting it to IPv4 while Arc SSH uses IPv6 — and caused a multi-hour lockout. AWACS captured that as a Class A anti-pattern entry. The next session knew about it before touching the node.
+[Doctrine enforcement case study →](https://awacs.ai/case-studies/doctrine-enforcement.html)
+
+**Vendor docs that are wrong, caught and corrected**
+The Azure Local HCI Orchestrator silently overwrites WDAC policies deployed via `CiTool.exe` within 90 minutes. The vendor's documentation says to use `CiTool.exe`. That's wrong. AWACS captured the correct path, validated it, stored it permanently, and flags it for revalidation if the dependency changes.
+[WDAC deployment case study →](https://awacs.ai/case-studies/wdac-ai-deployment.html)
+
+**Audit-ready AI operations**
+Every AI action is logged. Every knowledge base write has a traceable decision chain: command log → candidate → gate decision → admission. Compliance auditors can follow the entire chain for any entry.
+
+---
+
+## Executive Summary
+
+[Read the full executive summary →](EXECUTIVE-SUMMARY.md)
+
+---
+
 ## Want to Build This for Your Stack?
 
 This repo contains the methodology. The implementation — the hooks, the pipeline,
