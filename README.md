@@ -70,7 +70,7 @@ This is not a theoretical risk. It's a production footgun.
 AWACS catches it with a pre-flight check that verifies enforcement is active
 before any session work begins. If any of the 28+ checks fail, everything stops.
 
-[Read the write chain spec →](docs/write-chain.md)
+[Read the write chain spec →](docs/write-chain.md) · [Architecture maps (Mermaid diagrams) →](docs/architecture-maps.md)
 
 ---
 
